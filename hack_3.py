@@ -17,5 +17,17 @@ text: "qux" output => "QvX"
 
 def fn_hack_3(s):
     result = s
-    #...
+    reemplazos = {
+        'a': '@',
+        'o': '0',
+        'f': 'F',
+        'n': 'N',
+        'i': '¡',
+        'q': 'Q',
+        'u': 'v',
+        'x': 'X',
+        'b': 'B'
+    }
+    
+    result = ''.join(reemplazos.get(caracter, caracter) for caracter in s)
     return result

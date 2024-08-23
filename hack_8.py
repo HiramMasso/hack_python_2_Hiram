@@ -9,6 +9,9 @@ text: ["a","b"] output => ["2","1"]
 
 
 def fn_hack_8(s):
-    result = s
-    #...
+    result = []
+    num = 1
+    for i in s:
+        result.insert(0, f"{num}" if len(s) % 2 == 0 else f"{i}-{num}")
+        num += 1   
     return result
